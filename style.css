@@ -1,0 +1,10 @@
+body {
+    background-color: #ccc;
+    line-height: 1.5; /*межстрочный отступ*/
+    font-size: 18px;
+}
+
+.title {
+    font-size: 45px;
+    color: rgb(226, 6, 6);
+}
