@@ -1,0 +1,203 @@
+.bod{
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+ background: linear-gradient(black, #000099, #66c2ff, #ffcccc, #ffeee6);
+}
+
+button {
+    border-radius: 10px;
+    color: white;
+    background-color: #0F5897;
+    padding: 5px 10px 8px 10px;
+}
+
+
+button:hover {
+    animation-name: background-color;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes background-color{
+    100%{
+      background-color: #47d085;
+}
+}
+
+#rect{
+    height: 40px;
+    width: 70%;
+    background-color: black;
+    margin: 50px auto;
+    border-radius: 10px;
+    position: relative;
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rainbow{
+    0%{
+        background-color: blue;
+        top: 0px;
+        left: 0px;
+    }
+    50%{
+        background-color: green;
+        top: 50px;
+        left: 25px;
+        opacity: 0.1;
+    }
+    100%{
+        background-color: yellow;
+        top: 0px;
+        left: 0px;
+    }
+}
+
+
+.black{
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    border-radius: 25%;
+    top: 150px;
+    left: 15px;
+    width: 100px;
+    height: 100px;
+    background: rgb(143, 21, 21);
+    animation-name: backdiv;
+    animation-duration: 800ms;
+    animation-iteration-count: infinite;
+}
+
+.heart{
+    position: absolute;
+    margin: 0;
+    top: 180px;
+    right: 0;
+    bottom: 0;
+    left: 40px;
+    background-color: pink;
+    height: 50px;
+    width: 50px;
+    transform: rotate(-45deg);
+    animation-name: beat;
+    animation-duration: 800ms;
+    animation-iteration-count: infinite;
+}
+
+.heart:after{
+    background-color: pink;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 25px;
+}
+.heart:before {
+    background-color: pink;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 0px;
+}
+
+@keyframes backdiv{
+      50%{
+          background: #ffe6f2;
+      }
+}
+
+@keyframes beat{
+      0%{
+          transform: scale(1) rotate(-45deg);
+      }
+      50% {
+          transform: scale(0.6) rotate( -45deg);
+      }
+
+}
+
+.stars{
+    background-color: white;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    animation-iteration-count: infinite;
+
+}
+
+.star-1{
+    margin-top: 15%;
+    margin-left: 60%;
+    animation-name: twinkle-1;
+    animation-duration: 1s;
+}
+
+.star-2{
+    margin-top: 20%;
+    margin-left: 25%;
+    animation-name: twinkle-2;
+    animation-duration: 1s;
+
+}
+
+@keyframes twinkle-1{
+    20%{
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+}
+
+@keyframes twinkle-2{
+    50%{
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+}
+
+
+.balls{
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+.ball{
+    margin-top: -200px;
+    background-color: yellow;
+    animation-timing-function: linear;
+    
+   
+}
+
+.ball2{
+    background-color: red;
+    margin-top: -150px;
+    animation-timing-function: ease-out;
+}
+
+@keyframes bounce{
+    0%{
+        left: 0px;
+    }
+    100%{
+        left: 250px;
+    }
+}
